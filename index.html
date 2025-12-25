@@ -5,428 +5,1252 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Pulak Ranjan - Systems Engineer, AI Specialist & Context Engineer. Building reliable infrastructure, email systems, and AI-powered solutions.">
 <meta name="author" content="Pulak Ranjan">
+<meta name="robots" content="index, follow">
 <meta property="og:title" content="Pulak Ranjan | Systems & AI Engineer">
 <meta property="og:description" content="Self-taught developer building systems that hold. Infrastructure, Email Systems, AI Solutions.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pulak-ranjan.github.io">
+<meta property="og:image" content="https://pulak-ranjan.github.io/og-image.png">
 <title>Pulak Ranjan | Systems & AI Engineer</title>
 <link rel="canonical" href="https://pulak-ranjan.github.io">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0a'/%3E%3Ctext x='50' y='65' font-family='monospace' font-size='40' font-weight='bold' fill='%2300ff41' text-anchor='middle'%3E%3E_%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Pulak Ranjan","url":"https://pulak-ranjan.github.io","jobTitle":"Systems & AI Engineer"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0a0a;--bg-secondary:#0f0f0f;--bg-card:#111111;--border:#1a1a1a;--border-hover:#2a2a2a;--accent:#00ff41;--accent-dim:rgba(0,255,65,0.1);--accent-glow:rgba(0,255,65,0.4);--accent-secondary:#00d4ff;--accent-warning:#ffb000;--accent-error:#ff3366;--text-primary:#e0e0e0;--text-secondary:#888888;--text-muted:#555555;--mono:'IBM Plex Mono',monospace;--display:'Syne',sans-serif;--body:'Space Grotesk',sans-serif}
-*{margin:0;padding:0;box-sizing:border-box}
-::selection{background:var(--accent);color:var(--bg)}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
-body{background:var(--bg);color:var(--text-primary);font-family:var(--body);line-height:1.6;overflow-x:hidden}
-@media(min-width:901px){body{cursor:none}.cursor{width:20px;height:20px;border:2px solid var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:99999;transition:transform .1s,background .2s;transform:translate(-50%,-50%)}.cursor.hover{transform:translate(-50%,-50%) scale(1.5);background:var(--accent-dim)}.cursor-dot{width:4px;height:4px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:99999;transform:translate(-50%,-50%)}.cursor-glow{position:fixed;width:500px;height:500px;background:radial-gradient(circle,rgba(0,255,65,.08) 0%,transparent 70%);pointer-events:none;z-index:-1;transform:translate(-50%,-50%)}}
-@media(max-width:900px){.cursor,.cursor-dot,.cursor-glow{display:none!important}}
-body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.03) 2px,rgba(0,0,0,.03) 4px);pointer-events:none;z-index:10000}
-body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");opacity:.02;pointer-events:none;z-index:9999}
-.icon{width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
-.icon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.icon-filled svg{fill:currentColor;stroke:none}
-header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.25rem 2rem;background:rgba(10,10,10,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-.header-content{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
-.logo{display:flex;align-items:center;gap:.75rem;font-family:var(--mono);font-weight:600;font-size:.85rem;letter-spacing:.05em}
-.logo-indicator{width:8px;height:8px;background:var(--accent);border-radius:50%;box-shadow:0 0 10px var(--accent-glow);animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-nav{display:flex;gap:.25rem}
-nav a{font-family:var(--mono);font-size:.7rem;color:var(--text-secondary);text-decoration:none;padding:.5rem 1rem;border-radius:4px;transition:all .2s;letter-spacing:.05em;position:relative}
-nav a::before{content:'//';margin-right:.25rem;opacity:0;color:var(--accent);transition:opacity .2s}
-nav a:hover{color:var(--accent);background:var(--accent-dim)}
-nav a:hover::before{opacity:1}
-.mobile-menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text-primary);font-family:var(--mono);font-size:.75rem;padding:.5rem .75rem;border-radius:4px;cursor:pointer;transition:all .2s}
-.mobile-menu-btn:hover{border-color:var(--accent);color:var(--accent)}
-.mobile-nav{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(10,10,10,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:1rem;z-index:999;flex-direction:column;gap:.5rem}
-.mobile-nav.active{display:flex}
-.mobile-nav a{font-family:var(--mono);font-size:.8rem;color:var(--text-secondary);text-decoration:none;padding:.75rem 1rem;border-radius:4px;transition:all .2s;border:1px solid var(--border)}
-.mobile-nav a:hover,.mobile-nav a:active{color:var(--accent);border-color:var(--accent);background:var(--accent-dim)}
-.container{max-width:1400px;margin:0 auto;padding:0 2rem}
-.hero{min-height:100vh;display:flex;align-items:center;padding-top:80px;position:relative}
-.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;width:100%}
-.hero-content{position:relative}
-.status-badge{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.7rem;color:var(--accent);margin-bottom:2rem;opacity:0;animation:slideUp .6s ease forwards .2s}
-.status-badge::before{content:'>';animation:blink 1s step-end infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-h1{font-family:var(--display);font-size:clamp(2.75rem,8vw,6rem);font-weight:800;line-height:.95;letter-spacing:-.03em;margin-bottom:1.5rem;opacity:0;animation:slideUp .6s ease forwards .3s}
-h1 .line{display:block;overflow:hidden}
-h1 .char{display:inline-block;transition:all .3s cubic-bezier(.25,.46,.45,.94)}
-h1:hover .char{color:var(--accent);text-shadow:0 0 30px var(--accent-glow)}
-h1 .highlight{color:var(--accent);position:relative}
-h1 .highlight::after{content:'';position:absolute;bottom:.05em;left:0;right:0;height:.1em;background:var(--accent);opacity:.4}
-.hero-tagline{font-size:clamp(1rem,2vw,1.15rem);color:var(--text-secondary);line-height:1.8;max-width:500px;margin-bottom:2.5rem;opacity:0;animation:slideUp .6s ease forwards .4s}
-.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:slideUp .6s ease forwards .5s}
-.btn{font-family:var(--mono);font-size:.75rem;font-weight:500;padding:.9rem 1.8rem;border-radius:4px;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;border:none;letter-spacing:.05em}
-.btn-primary{background:var(--accent);color:var(--bg)}
-.btn-primary:hover{box-shadow:0 0 30px var(--accent-glow);transform:translateY(-2px)}
-.btn-secondary{background:transparent;color:var(--text-primary);border:1px solid var(--border)}
-.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
-.hero-terminal{opacity:0;animation:slideUp .6s ease forwards .6s}
-.terminal{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,255,65,.05),0 25px 80px rgba(0,0,0,.5)}
-.terminal-header{padding:.875rem 1.25rem;background:rgba(255,255,255,.02);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
-.terminal-dot{width:12px;height:12px;border-radius:50%}
-.terminal-dot.red{background:#ff5f57}
-.terminal-dot.yellow{background:#ffbd2e}
-.terminal-dot.green{background:#28c840}
-.terminal-title{font-family:var(--mono);font-size:.7rem;color:var(--text-muted);margin-left:.75rem}
-.terminal-body{padding:1.25rem;font-family:var(--mono);font-size:.75rem;line-height:1.8;height:350px;overflow-y:auto}
-.terminal-body::-webkit-scrollbar{width:6px}
-.terminal-body::-webkit-scrollbar-track{background:var(--bg)}
-.terminal-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
-.terminal-output{margin-bottom:.5rem}
-.terminal-line{margin-bottom:.25rem;white-space:pre-wrap;word-break:break-word}
-.t-prompt{color:var(--accent)}
-.t-cmd{color:var(--text-primary)}
-.t-output{color:var(--text-secondary)}
-.t-string{color:var(--accent-warning)}
-.t-key{color:var(--accent-secondary)}
-.t-comment{color:var(--text-muted);font-style:italic}
-.t-error{color:var(--accent-error)}
-.t-success{color:var(--accent)}
-.terminal-input-line{display:flex;align-items:center;gap:.5rem;margin-top:.5rem}
-.terminal-input{background:transparent;border:none;color:var(--text-primary);font-family:var(--mono);font-size:.75rem;flex:1;outline:none;caret-color:var(--accent)}
-.terminal-input::placeholder{color:var(--text-muted)}
-.json-output{background:rgba(0,0,0,.3);border-radius:4px;padding:.75rem;margin:.5rem 0;border-left:2px solid var(--accent);font-size:.7rem}
-@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-section{padding:100px 0;position:relative}
-.section-header{margin-bottom:3.5rem}
-.section-label{font-family:var(--mono);font-size:.7rem;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:1rem}
-.section-label::before{content:'';width:30px;height:1px;background:var(--accent)}
-h2{font-family:var(--display);font-size:clamp(1.75rem,4vw,3rem);font-weight:700;letter-spacing:-.02em;line-height:1.1}
-h2 .muted{color:var(--text-muted)}
-.about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
-.about-visual{position:sticky;top:120px}
-.profile-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;overflow:hidden}
-.profile-card-header{padding:2rem;background:linear-gradient(135deg,var(--accent-dim),transparent);border-bottom:1px solid var(--border)}
-.profile-avatar{width:72px;height:72px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:1.25rem;font-weight:700;color:var(--bg);margin-bottom:1.25rem}
-.profile-name{font-family:var(--display);font-size:1.35rem;font-weight:700;margin-bottom:.25rem}
-.profile-title{font-family:var(--mono);font-size:.75rem;color:var(--accent)}
-.profile-card-body{padding:1.5rem 2rem}
-.profile-meta{display:flex;flex-direction:column;gap:1rem}
-.profile-meta-item{display:flex;align-items:center;gap:1rem;font-size:.85rem;color:var(--text-secondary)}
-.profile-meta-icon{width:36px;height:36px;background:var(--bg);border:1px solid var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--accent)}
-.profile-meta-icon .icon{width:16px;height:16px}
-.about-content{display:flex;flex-direction:column;gap:1.5rem}
-.about-content p{font-size:1.05rem;color:var(--text-secondary);line-height:1.9}
-.about-content p:first-of-type{font-size:1.15rem;color:var(--text-primary)}
-.about-content p strong{color:var(--accent);font-weight:500}
-.about-quote{font-family:var(--mono);font-size:.85rem;color:var(--text-muted);padding:1.5rem;border-left:2px solid var(--accent);background:var(--accent-dim);margin-top:1rem}
-.skills-wrapper{display:flex;flex-direction:column;gap:2.5rem}
-.skills-category{display:flex;flex-direction:column;gap:1rem}
-.skills-category-title{font-family:var(--mono);font-size:.7rem;color:var(--text-muted);letter-spacing:.15em;text-transform:uppercase}
-.skills-grid{display:flex;flex-wrap:wrap;gap:.5rem}
-.skill-tag{font-family:var(--mono);font-size:.7rem;padding:.5rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:4px;color:var(--text-secondary);transition:all .2s;cursor:pointer}
-.skill-tag:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim);box-shadow:0 0 20px var(--accent-dim)}
-.skill-tag.highlight{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
-.experience-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
-.experience-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:2rem;transition:all .3s;position:relative}
-.experience-card::before{content:'';position:absolute;top:0;left:0;width:2px;height:0;background:var(--accent);transition:height .3s}
-.experience-card:hover{border-color:var(--border-hover);transform:translateY(-3px)}
-.experience-card:hover::before{height:100%}
-.experience-header{display:flex;justify-content:space-between;align-items:start;margin-bottom:.75rem;gap:1rem}
-.experience-company{font-family:var(--display);font-size:1.1rem;font-weight:600}
-.experience-period{font-family:var(--mono);font-size:.6rem;color:var(--text-muted);padding:.25rem .5rem;background:var(--bg);border-radius:3px;white-space:nowrap}
-.experience-role{font-family:var(--mono);font-size:.75rem;color:var(--accent);margin-bottom:1rem}
-.experience-description{font-size:.9rem;color:var(--text-secondary);line-height:1.7}
-.expertise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden}
-.expertise-card{background:var(--bg);padding:2rem 1.5rem;transition:all .3s;position:relative}
-.expertise-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transition:transform .3s}
-.expertise-card:hover{background:var(--bg-card)}
-.expertise-card:hover::after{transform:scaleX(1)}
-.expertise-icon{width:44px;height:44px;background:var(--accent-dim);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;color:var(--accent)}
-.expertise-icon .icon{width:22px;height:22px}
-.expertise-card h3{font-family:var(--display);font-size:1rem;font-weight:600;margin-bottom:.5rem}
-.expertise-card p{font-size:.8rem;color:var(--text-secondary);line-height:1.6}
-.philosophy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.philosophy-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1.75rem;transition:all .3s}
-.philosophy-card:hover{border-color:var(--border-hover);transform:translateY(-3px)}
-.philosophy-number{font-family:var(--mono);font-size:2rem;font-weight:700;color:var(--border);line-height:1;margin-bottom:1rem}
-.philosophy-card blockquote{font-size:.9rem;color:var(--text-primary);line-height:1.7;font-style:normal}
-.philosophy-card cite{display:block;margin-top:.75rem;font-family:var(--mono);font-size:.6rem;color:var(--text-muted);font-style:normal}
-.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.project-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1.75rem;transition:all .3s;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.project-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent-dim),transparent);opacity:0;transition:opacity .3s}
-.project-card:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 0 40px var(--accent-dim)}
-.project-card:hover::before{opacity:1}
-.project-header{display:flex;justify-content:space-between;align-items:start;margin-bottom:1rem;position:relative;z-index:1}
-.project-icon{width:44px;height:44px;background:var(--accent-dim);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--accent)}
-.project-icon .icon{width:22px;height:22px}
-.project-links{display:flex;gap:.5rem}
-.project-link{width:32px;height:32px;border-radius:4px;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all .2s}
-.project-link:hover{color:var(--accent);border-color:var(--accent)}
-.project-link .icon{width:14px;height:14px}
-.project-content{flex:1;position:relative;z-index:1}
-.project-card h3{font-family:var(--display);font-size:1.1rem;font-weight:600;margin-bottom:.5rem}
-.project-card p{font-size:.85rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.25rem}
-.project-tech{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto}
-.project-tech span{font-family:var(--mono);font-size:.6rem;padding:.25rem .5rem;background:var(--bg);border-radius:3px;color:var(--text-muted)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
-.contact-info h2{margin-bottom:1.5rem}
-.contact-info>p{font-size:1.05rem;color:var(--text-secondary);line-height:1.8;margin-bottom:2rem}
-.contact-email{font-family:var(--mono);font-size:1.1rem;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:.75rem;transition:all .3s}
-.contact-email:hover{gap:1.25rem;text-shadow:0 0 20px var(--accent-glow)}
-.contact-email::after{content:'→';transition:transform .3s}
-.contact-email:hover::after{transform:translateX(5px)}
-.contact-links{display:flex;flex-direction:column;gap:.75rem}
-.contact-link{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;text-decoration:none;color:var(--text-primary);transition:all .3s}
-.contact-link:hover{border-color:var(--accent);transform:translateX(10px)}
-.contact-link-content{display:flex;flex-direction:column}
-.contact-link-label{font-family:var(--mono);font-size:.6rem;color:var(--text-muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.15rem}
-.contact-link-value{font-size:.85rem}
-.contact-link-arrow{color:var(--accent);opacity:0;transition:opacity .3s}
-.contact-link:hover .contact-link-arrow{opacity:1}
-footer{border-top:1px solid var(--border);padding:2.5rem 0;margin-top:60px}
-.footer-content{display:flex;justify-content:space-between;align-items:center}
-.footer-left{font-family:var(--mono);font-size:.7rem;color:var(--text-muted)}
-.footer-right{display:flex;gap:1.5rem}
-.footer-right a{font-family:var(--mono);font-size:.7rem;color:var(--text-secondary);text-decoration:none;transition:color .2s}
-.footer-right a:hover{color:var(--accent)}
-.terminal-toggle{position:fixed;bottom:1.5rem;right:1.5rem;width:52px;height:52px;background:var(--accent);border:none;border-radius:8px;color:var(--bg);font-family:var(--mono);font-size:1rem;font-weight:600;cursor:pointer;z-index:1001;display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px var(--accent-glow);transition:all .3s}
-.terminal-toggle:hover{transform:scale(1.1)}
-.terminal-modal{position:fixed;bottom:5.5rem;right:1.5rem;width:420px;max-height:450px;z-index:1000;opacity:0;visibility:hidden;transform:translateY(20px) scale(.95);transition:all .3s cubic-bezier(.25,.46,.45,.94)}
-.terminal-modal.active{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
-.terminal-modal .terminal{box-shadow:0 25px 80px rgba(0,0,0,.6),0 0 0 1px var(--accent-dim)}
-.terminal-modal .terminal-body{height:320px}
-.reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.25,.46,.45,.94)}
-.reveal.active{opacity:1;transform:translateY(0)}
-@media(max-width:1200px){.expertise-grid{grid-template-columns:repeat(2,1fr)}.projects-grid{grid-template-columns:repeat(2,1fr)}.philosophy-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:900px){.container{padding:0 1.25rem}header{padding:1rem 1.25rem}nav{display:none}.mobile-menu-btn{display:block}section{padding:80px 0}.hero{min-height:auto;padding:120px 0 80px}.hero-grid{grid-template-columns:1fr;gap:3rem}.hero-terminal{order:-1}.terminal-body{height:280px}.about-grid{grid-template-columns:1fr;gap:2.5rem}.about-visual{position:static}.experience-grid{grid-template-columns:1fr}.expertise-grid{grid-template-columns:1fr}.projects-grid{grid-template-columns:1fr}.philosophy-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr;gap:2.5rem}.footer-content{flex-direction:column;gap:1rem;text-align:center}.terminal-modal{right:1rem;left:1rem;width:auto;bottom:5rem}.terminal-modal .terminal-body{height:280px}.terminal-toggle{width:48px;height:48px;bottom:1rem;right:1rem}.btn{padding:.8rem 1.4rem;font-size:.7rem}.contact-email{font-size:.95rem}.profile-card-header,.profile-card-body{padding:1.5rem}}
-@media(max-width:480px){.container{padding:0 1rem}h1{font-size:2.25rem}h2{font-size:1.5rem}.hero-ctas{flex-direction:column}.btn{width:100%;justify-content:center}.skill-tag{font-size:.65rem;padding:.4rem .8rem}.experience-card,.philosophy-card,.project-card{padding:1.5rem}.expertise-card{padding:1.5rem 1.25rem}.contact-link{padding:.875rem 1rem}.contact-link-value{font-size:.8rem}}
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #111111;
+  --border: #1a1a1a;
+  --border-hover: #2a2a2a;
+  --accent: #00ff41;
+  --accent-dim: rgba(0,255,65,0.1);
+  --accent-glow: rgba(0,255,65,0.4);
+  --text-primary: #e0e0e0;
+  --text-secondary: #888888;
+  --text-muted: #555555;
+  --mono: 'IBM Plex Mono', monospace;
+  --display: 'Syne', sans-serif;
+  --body: 'Space Grotesk', sans-serif;
+}
+
+[data-theme="green"] { --accent: #00ff41; --accent-dim: rgba(0,255,65,0.1); --accent-glow: rgba(0,255,65,0.4); }
+[data-theme="orange"] { --accent: #ff6b00; --accent-dim: rgba(255,107,0,0.1); --accent-glow: rgba(255,107,0,0.4); }
+[data-theme="yellow"] { --accent: #ffd000; --accent-dim: rgba(255,208,0,0.1); --accent-glow: rgba(255,208,0,0.4); }
+[data-theme="cyan"] { --accent: #00d4ff; --accent-dim: rgba(0,212,255,0.1); --accent-glow: rgba(0,212,255,0.4); }
+[data-theme="pink"] { --accent: #ff0080; --accent-dim: rgba(255,0,128,0.1); --accent-glow: rgba(255,0,128,0.4); }
+[data-theme="purple"] { --accent: #a855f7; --accent-dim: rgba(168,85,247,0.1); --accent-glow: rgba(168,85,247,0.4); }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+::selection { background: var(--accent); color: var(--bg); }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body { background: var(--bg); color: var(--text-primary); font-family: var(--body); line-height: 1.6; overflow-x: hidden; cursor: default; }
+
+/* Custom Cursor - Desktop Only */
+@media (min-width: 901px) {
+  body { cursor: none; }
+  .cursor { width: 20px; height: 20px; border: 2px solid var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 99999; transition: transform 0.1s, background 0.2s; transform: translate(-50%, -50%); }
+  .cursor.hover { transform: translate(-50%, -50%) scale(1.5); background: var(--accent-dim); }
+  .cursor-dot { width: 4px; height: 4px; background: var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 99999; transform: translate(-50%, -50%); }
+  .cursor-glow { position: fixed; width: 500px; height: 500px; background: radial-gradient(circle, var(--accent-dim) 0%, transparent 70%); pointer-events: none; z-index: -1; transform: translate(-50%, -50%); }
+}
+@media (max-width: 900px) {
+  .cursor, .cursor-dot, .cursor-glow { display: none !important; }
+}
+
+body::before { content: ''; position: fixed; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px); pointer-events: none; z-index: 10000; }
+
+/* Icon Styles */
+.icon { width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.icon svg { width: 100%; height: 100%; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Theme Switcher */
+.theme-switcher { position: fixed; top: 50%; right: 1.5rem; transform: translateY(-50%); z-index: 1002; display: flex; flex-direction: column; gap: 0.5rem; padding: 0.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; }
+.theme-btn { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--border); cursor: pointer; transition: all 0.2s; }
+.theme-btn:hover { transform: scale(1.2); }
+.theme-btn.active { border-color: #fff; box-shadow: 0 0 10px currentColor; }
+.theme-btn[data-color="green"] { background: #00ff41; }
+.theme-btn[data-color="orange"] { background: #ff6b00; }
+.theme-btn[data-color="yellow"] { background: #ffd000; }
+.theme-btn[data-color="cyan"] { background: #00d4ff; }
+.theme-btn[data-color="pink"] { background: #ff0080; }
+.theme-btn[data-color="purple"] { background: #a855f7; }
+
+/* Header */
+header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.25rem 2rem; background: rgba(10,10,10,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+.header-content { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.logo { display: flex; align-items: center; gap: 0.75rem; font-family: var(--mono); font-weight: 600; font-size: 0.85rem; }
+.logo-indicator { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 10px var(--accent-glow); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+nav { display: flex; gap: 0.25rem; }
+nav a { font-family: var(--mono); font-size: 0.7rem; color: var(--text-secondary); text-decoration: none; padding: 0.5rem 1rem; border-radius: 4px; transition: all 0.2s; }
+nav a::before { content: '//'; margin-right: 0.25rem; opacity: 0; color: var(--accent); transition: opacity 0.2s; }
+nav a:hover, nav a.active { color: var(--accent); background: var(--accent-dim); }
+nav a:hover::before, nav a.active::before { opacity: 1; }
+
+.available-badge { display: flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-size: 0.65rem; color: var(--accent); background: var(--accent-dim); padding: 0.4rem 0.8rem; border-radius: 100px; border: 1px solid var(--accent); margin-left: 1rem; }
+.available-badge::before { content: ''; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 1.5s ease-in-out infinite; }
+
+.mobile-menu-btn { display: none; background: none; border: 1px solid var(--border); color: var(--text-primary); font-family: var(--mono); font-size: 0.75rem; padding: 0.5rem 0.75rem; border-radius: 4px; cursor: pointer; }
+.mobile-nav { display: none; position: fixed; top: 60px; left: 0; right: 0; background: rgba(10,10,10,0.98); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 1rem; z-index: 999; flex-direction: column; gap: 0.5rem; }
+.mobile-nav.active { display: flex; }
+.mobile-nav a { font-family: var(--mono); font-size: 0.8rem; color: var(--text-secondary); text-decoration: none; padding: 0.75rem 1rem; border-radius: 4px; border: 1px solid var(--border); }
+.mobile-nav a:hover, .mobile-nav a.active { color: var(--accent); border-color: var(--accent); background: var(--accent-dim); }
+
+/* Container */
+.container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+
+/* Hero */
+.hero { min-height: 100vh; display: flex; align-items: center; padding-top: 80px; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; width: 100%; }
+.hero-content { text-align: left; }
+.status-badge { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-size: 0.7rem; color: var(--accent); margin-bottom: 2rem; opacity: 0; animation: slideUp 0.6s ease forwards 0.2s; }
+.status-badge::before { content: '>'; animation: blink 1s step-end infinite; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+h1 { font-family: var(--display); font-size: clamp(2.75rem, 8vw, 6rem); font-weight: 800; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 1.5rem; opacity: 0; animation: slideUp 0.6s ease forwards 0.3s; }
+h1 .highlight { color: var(--accent); }
+
+.hero-tagline { font-size: clamp(1rem, 2vw, 1.15rem); color: var(--text-secondary); line-height: 1.8; max-width: 500px; margin-bottom: 2.5rem; opacity: 0; animation: slideUp 0.6s ease forwards 0.4s; }
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: slideUp 0.6s ease forwards 0.5s; }
+.hero-terminal { opacity: 0; animation: slideUp 0.6s ease forwards 0.6s; }
+.mobile-terminal-btn { display: none; }
+
+@media (min-width: 901px) {
+  .mobile-terminal-btn { display: none !important; }
+}
+
+.btn { font-family: var(--mono); font-size: 0.75rem; font-weight: 500; padding: 0.9rem 1.8rem; border-radius: 4px; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; border: none; }
+.btn-primary { background: var(--accent); color: var(--bg); }
+.btn-primary:hover { box-shadow: 0 0 30px var(--accent-glow); transform: translateY(-2px); }
+.btn-secondary { background: transparent; color: var(--text-primary); border: 1px solid var(--border); }
+.btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+.btn-terminal { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.btn-terminal:hover { background: var(--accent); color: var(--bg); }
+
+/* Terminal Fullscreen Button */
+.terminal-fullscreen { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer; padding: 0.25rem; transition: color 0.2s; display: flex; align-items: center; justify-content: center; }
+.terminal-fullscreen:hover { color: var(--accent); }
+.terminal-fullscreen .icon { width: 14px; height: 14px; }
+.terminal-header { position: relative; }
+
+/* Hero Terminal Modal (Fullscreen) */
+.hero-terminal-modal { position: fixed; inset: 0; z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s; }
+.hero-terminal-modal.active { opacity: 1; visibility: visible; }
+.hero-terminal-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); }
+.hero-terminal-container { position: relative; width: 90%; max-width: 800px; max-height: 85vh; transform: translateY(20px) scale(0.95); transition: transform 0.3s; }
+.hero-terminal-modal.active .hero-terminal-container { transform: translateY(0) scale(1); }
+.large-terminal .terminal-body { height: 500px; }
+.terminal-close { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; padding: 0; line-height: 1; transition: color 0.2s; }
+.terminal-close:hover { color: var(--accent); }
+
+/* Hero Terminal */
+.hero-terminal { opacity: 0; animation: slideUp 0.6s ease forwards 0.6s; }
+.terminal { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; box-shadow: 0 25px 80px rgba(0,0,0,0.5); }
+.terminal-header { padding: 0.875rem 1.25rem; background: rgba(255,255,255,0.02); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
+.terminal-dot { width: 12px; height: 12px; border-radius: 50%; }
+.terminal-dot.red { background: #ff5f57; }
+.terminal-dot.yellow { background: #ffbd2e; }
+.terminal-dot.green { background: #28c840; }
+.terminal-title { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); margin-left: 0.75rem; }
+.terminal-body { padding: 1.25rem; font-family: var(--mono); font-size: 0.72rem; line-height: 1.8; height: 350px; overflow-y: auto; background: #050505; }
+.terminal-body::-webkit-scrollbar { width: 6px; }
+.terminal-body::-webkit-scrollbar-track { background: #050505; }
+.terminal-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Hero Terminal Colors */
+.ht-line { margin-bottom: 3px; }
+.ht-prompt { color: #00ff41; }
+.ht-cmd { color: #fff; }
+.ht-path { color: #00d4ff; }
+.ht-success { color: #00ff41; }
+.ht-warning { color: #ffb000; }
+.ht-error { color: #ff3366; }
+.ht-info { color: #00d4ff; }
+.ht-purple { color: #a855f7; }
+.ht-pink { color: #ff0080; }
+.ht-gray { color: #666; }
+.ht-dim { color: #444; }
+
+.terminal-input-line { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #1a1a1a; }
+.terminal-input { background: transparent; border: none; color: #fff; font-family: var(--mono); font-size: 0.72rem; flex: 1; outline: none; caret-color: #00ff41; }
+.terminal-input::placeholder { color: #333; }
+
+/* Sections */
+section { padding: 100px 0; }
+.section-header { margin-bottom: 3.5rem; }
+.section-label { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem; }
+.section-label::before { content: ''; width: 30px; height: 1px; background: var(--accent); }
+
+h2 { font-family: var(--display); font-size: clamp(1.75rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+h2 .muted { color: var(--text-muted); }
+
+/* About */
+.about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
+.about-visual { position: sticky; top: 120px; }
+.profile-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.profile-card-header { padding: 2rem; background: linear-gradient(135deg, var(--accent-dim), transparent); border-bottom: 1px solid var(--border); }
+.profile-avatar { width: 72px; height: 72px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 1.25rem; font-weight: 700; color: var(--bg); margin-bottom: 1.25rem; }
+.profile-name { font-family: var(--display); font-size: 1.35rem; font-weight: 700; margin-bottom: 0.25rem; }
+.profile-title { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); }
+.profile-card-body { padding: 1.5rem 2rem; }
+.profile-meta { display: flex; flex-direction: column; gap: 1rem; }
+.profile-meta-item { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--text-secondary); }
+.profile-meta-icon { width: 36px; height: 36px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--accent); }
+.profile-meta-icon .icon { width: 16px; height: 16px; }
+
+.about-content { display: flex; flex-direction: column; gap: 1.5rem; }
+.about-content p { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.9; }
+.about-content p:first-of-type { font-size: 1.15rem; color: var(--text-primary); }
+.about-content p strong { color: var(--accent); font-weight: 500; }
+.about-quote { font-family: var(--mono); font-size: 0.85rem; color: var(--text-muted); padding: 1.5rem; border-left: 2px solid var(--accent); background: var(--accent-dim); margin-top: 1rem; }
+
+/* Skills */
+.skills-wrapper { display: flex; flex-direction: column; gap: 2.5rem; }
+.skills-category { display: flex; flex-direction: column; gap: 1rem; }
+.skills-category-title { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase; }
+.skills-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.skill-tag { font-family: var(--mono); font-size: 0.7rem; padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-secondary); transition: all 0.2s; cursor: pointer; }
+.skill-tag:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+.skill-tag.highlight { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+
+/* Experience */
+.experience-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.experience-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; transition: all 0.3s; position: relative; }
+.experience-card::before { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 0; background: var(--accent); transition: height 0.3s; }
+.experience-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
+.experience-card:hover::before { height: 100%; }
+.experience-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem; gap: 1rem; }
+.experience-company { font-family: var(--display); font-size: 1.1rem; font-weight: 600; }
+.experience-period { font-family: var(--mono); font-size: 0.6rem; color: var(--text-muted); padding: 0.25rem 0.5rem; background: var(--bg); border-radius: 3px; }
+.experience-role { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); margin-bottom: 1rem; }
+.experience-description { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
+
+/* Expertise */
+.expertise-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.expertise-card { background: var(--bg); padding: 2rem 1.5rem; transition: all 0.3s; position: relative; }
+.expertise-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform: scaleX(0); transition: transform 0.3s; }
+.expertise-card:hover { background: var(--bg-card); }
+.expertise-card:hover::after { transform: scaleX(1); }
+.expertise-icon { width: 44px; height: 44px; background: var(--accent-dim); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; color: var(--accent); }
+.expertise-icon .icon { width: 22px; height: 22px; }
+.expertise-card h3 { font-family: var(--display); font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+.expertise-card p { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6; }
+
+/* Philosophy */
+.philosophy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.philosophy-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.75rem; transition: all 0.3s; }
+.philosophy-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
+.philosophy-number { font-family: var(--mono); font-size: 2rem; font-weight: 700; color: var(--border); line-height: 1; margin-bottom: 1rem; }
+.philosophy-card h3 { font-family: var(--display); font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+.philosophy-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+
+/* Projects */
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.project-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; transition: all 0.3s; display: flex; flex-direction: column; }
+.project-card:hover { border-color: var(--border-hover); transform: translateY(-5px); }
+.project-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem; }
+.project-icon { width: 44px; height: 44px; background: var(--accent-dim); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--accent); }
+.project-icon .icon { width: 22px; height: 22px; }
+.project-links { display: flex; gap: 0.5rem; }
+.project-link { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: 4px; color: var(--text-secondary); text-decoration: none; transition: all 0.2s; }
+.project-link:hover { border-color: var(--accent); color: var(--accent); }
+.project-link .icon { width: 14px; height: 14px; }
+.project-card h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+.project-description { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem; flex: 1; }
+.project-tech { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.project-tech span { font-family: var(--mono); font-size: 0.65rem; color: var(--text-muted); padding: 0.25rem 0.5rem; background: var(--bg); border-radius: 3px; }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.contact-link { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; text-decoration: none; display: flex; align-items: center; justify-content: space-between; transition: all 0.3s; }
+.contact-link:hover { border-color: var(--accent); transform: translateY(-3px); }
+.contact-link-content { display: flex; flex-direction: column; gap: 0.25rem; }
+.contact-link-label { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+.contact-link-value { font-family: var(--display); font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+.contact-link-arrow { font-size: 1.25rem; color: var(--text-muted); transition: all 0.2s; }
+.contact-link:hover .contact-link-arrow { color: var(--accent); transform: translateX(5px); }
+
+/* Footer */
+footer { padding: 3rem 0; border-top: 1px solid var(--border); }
+.footer-content { display: flex; justify-content: space-between; align-items: center; }
+.footer-left { font-family: var(--mono); font-size: 0.75rem; color: var(--text-muted); }
+.footer-right { display: flex; gap: 2rem; }
+.footer-right a { font-family: var(--mono); font-size: 0.75rem; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
+.footer-right a:hover { color: var(--accent); }
+
+/* Chatbot Toggle & Modal */
+.terminal-toggle { position: fixed; bottom: 1.5rem; right: 1.5rem; width: 52px; height: 52px; background: var(--accent); border: none; border-radius: 8px; color: var(--bg); font-family: var(--mono); font-size: 1rem; font-weight: 600; cursor: pointer; z-index: 1001; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px var(--accent-glow); transition: all 0.3s; }
+.terminal-toggle:hover { transform: scale(1.1); }
+.terminal-modal { position: fixed; bottom: 5.5rem; right: 1.5rem; width: 420px; max-height: 480px; z-index: 1000; opacity: 0; visibility: hidden; transform: translateY(20px) scale(0.95); transition: all 0.3s; }
+.terminal-modal.active { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+.terminal-modal .terminal { box-shadow: 0 25px 80px rgba(0,0,0,0.6); }
+.terminal-modal .terminal-body { height: 350px; background: var(--bg-card); }
+
+/* Chatbot Styles */
+.cb-line { margin-bottom: 0.5rem; }
+.cb-prompt { color: var(--accent); }
+.cb-cmd { color: #fff; }
+.cb-response { background: rgba(255,255,255,0.02); padding: 1rem; margin: 0.75rem 0; border-radius: 6px; white-space: pre-wrap; line-height: 1.7; }
+.cb-title { color: var(--accent); font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 0.75rem; }
+.cb-section { color: var(--accent); font-weight: 500; display: block; margin-top: 0.75rem; margin-bottom: 0.25rem; }
+.cb-label { color: var(--text-muted); }
+.cb-value { color: var(--text-primary); }
+.cb-highlight { color: var(--accent); }
+.cb-link { color: #00d4ff; }
+.cb-dim { color: var(--text-muted); }
+.cb-list { color: #00d4ff; }
+.cb-error { color: #ff3366; }
+
+/* Reveal Animation */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .container { padding: 0 1.25rem; }
+  header { padding: 1rem 1.25rem; }
+  nav, .available-badge { display: none; }
+  .mobile-menu-btn { display: block; }
+  section { padding: 60px 0; }
+  .hero { min-height: auto; padding: 100px 0 60px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+  .hero-content { text-align: center; }
+  .hero-tagline { margin-left: auto; margin-right: auto; }
+  .hero-ctas { justify-content: center; }
+  .hero-terminal { display: none; }
+  .mobile-terminal-btn { display: inline-flex; margin-top: 1rem; }
+  .terminal-body { height: 280px; }
+  .large-terminal .terminal-body { height: 350px; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-visual { position: static; }
+  .experience-grid, .expertise-grid, .projects-grid, .philosophy-grid, .contact-grid { grid-template-columns: 1fr; }
+  .footer-content { flex-direction: column; gap: 1rem; text-align: center; }
+  .terminal-modal { right: 1rem; left: 1rem; width: auto; bottom: 5rem; }
+  .terminal-toggle { width: 48px; height: 48px; bottom: 1rem; right: 1rem; }
+  .profile-card-header, .profile-card-body { padding: 1.5rem; }
+  .theme-switcher { top: auto; bottom: 5rem; right: 1rem; flex-direction: row; transform: none; }
+  .theme-btn { width: 20px; height: 20px; }
+  .hero-terminal-container { width: 95%; max-height: 70vh; }
+  .section-header { margin-bottom: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 1rem; }
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.5rem; }
+  .hero { padding: 90px 0 50px; }
+  .hero-tagline { font-size: 0.95rem; }
+  .hero-ctas { flex-direction: column; width: 100%; }
+  .hero-ctas .btn, .mobile-terminal-btn { width: 100%; justify-content: center; }
+  .btn { padding: 0.8rem 1.5rem; font-size: 0.7rem; }
+  .skill-tag { font-size: 0.65rem; padding: 0.4rem 0.8rem; }
+  .experience-card, .philosophy-card, .project-card, .expertise-card { padding: 1.25rem; }
+  .profile-card-header, .profile-card-body { padding: 1.25rem; }
+  .about-content p { font-size: 0.95rem; }
+  .about-quote { font-size: 0.8rem; padding: 1rem; }
+  .terminal-toggle { width: 44px; height: 44px; font-size: 0.9rem; }
+  .theme-switcher { bottom: 4rem; }
+  .theme-btn { width: 18px; height: 18px; }
+}
 </style>
 </head>
 <body>
+<!-- Cursor Elements -->
 <div class="cursor"></div>
 <div class="cursor-dot"></div>
 <div class="cursor-glow"></div>
+
+<!-- Theme Switcher -->
+<div class="theme-switcher">
+  <button class="theme-btn active" data-color="green" title="Green"></button>
+  <button class="theme-btn" data-color="orange" title="Orange"></button>
+  <button class="theme-btn" data-color="yellow" title="Yellow"></button>
+  <button class="theme-btn" data-color="cyan" title="Cyan"></button>
+  <button class="theme-btn" data-color="pink" title="Pink"></button>
+  <button class="theme-btn" data-color="purple" title="Purple"></button>
+</div>
+
+<!-- Header -->
 <header>
-<div class="header-content">
-<div class="logo"><span class="logo-indicator"></span>PULAK_RANJAN</div>
-<nav>
-<a href="#about">about</a>
-<a href="#skills">skills</a>
-<a href="#experience">experience</a>
-<a href="#projects">projects</a>
-<a href="#contact">contact</a>
-</nav>
-<button class="mobile-menu-btn" id="mobile-menu-btn">MENU</button>
-</div>
+  <div class="header-content">
+    <div class="logo">
+      <div class="logo-indicator"></div>
+      PULAK_RANJAN
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="available-badge">AVAILABLE FOR WORK</div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">MENU</button>
+  </div>
 </header>
-<div class="mobile-nav" id="mobile-nav">
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 </div>
+
 <main class="container">
-<section class="hero">
-<div class="hero-grid">
-<div class="hero-content">
-<div class="status-badge">SYSTEM ONLINE — READY FOR INPUT</div>
-<h1><span class="line">Building</span><span class="line">Systems That</span><span class="line"><span class="highlight">Hold</span>.</span></h1>
-<p class="hero-tagline">Self-taught developer specializing in infrastructure, email systems, and AI-powered solutions. I build things that don't break at 3 AM.</p>
-<div class="hero-ctas">
-<a href="#projects" class="btn btn-primary">VIEW_PROJECTS →</a>
-<a href="#contact" class="btn btn-secondary">GET_IN_TOUCH</a>
-</div>
-</div>
-<div class="hero-terminal">
-<div class="terminal">
-<div class="terminal-header">
-<div class="terminal-dot red"></div>
-<div class="terminal-dot yellow"></div>
-<div class="terminal-dot green"></div>
-<span class="terminal-title">pulak@portfolio ~ interactive</span>
-</div>
-<div class="terminal-body" id="hero-terminal-body">
-<div class="terminal-output" id="hero-output">
-<div class="terminal-line"><span class="t-comment"># Welcome! Type 'help' to see available commands</span></div>
-<div class="terminal-line"><span class="t-comment"># Try: whoami, skills, projects, contact, hire</span></div>
-<div class="terminal-line"></div>
-</div>
-<div class="terminal-input-line">
-<span class="t-prompt">$</span>
-<input type="text" class="terminal-input" id="hero-terminal-input" placeholder="type a command..." autocomplete="off" spellcheck="false">
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="about">
-<div class="section-header reveal"><div class="section-label">001 — About</div><h2>Pharmacy to Programming.<br><span class="muted">An Unexpected Journey.</span></h2></div>
-<div class="about-grid">
-<div class="about-visual reveal">
-<div class="profile-card">
-<div class="profile-card-header">
-<div class="profile-avatar">PR</div>
-<div class="profile-name">Pulak Ranjan</div>
-<div class="profile-title">Systems & AI Engineer</div>
-</div>
-<div class="profile-card-body">
-<div class="profile-meta">
-<div class="profile-meta-item"><span class="profile-meta-icon"><span class="icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span></span>India</div>
-<div class="profile-meta-item"><span class="profile-meta-icon"><span class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span></span>Co-founder @ Bengal Skill Academy</div>
-<div class="profile-meta-item"><span class="profile-meta-icon"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span></span>Context Engineer & AI Developer</div>
-<div class="profile-meta-item"><span class="profile-meta-icon"><span class="icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span></span>Pharmacy Background</div>
-</div>
-</div>
-</div>
-</div>
-<div class="about-content reveal">
-<p>I'm a self-taught developer with a passion for logic, automation, and AI-driven solutions. I studied pharmacy but unexpectedly fell in love with technology—and never looked back.</p>
-<p>Currently working as a <strong>Context Engineer and AI Specialist</strong> at Bengal Skill Academy (which I proudly co-founded), I specialize in integrating AI into real-world applications using Python, PHP, Go, and modern tools.</p>
-<p>My work started with real failures—emails landing in spam, automation breaking silently, AI systems producing confident but wrong outputs. Instead of stacking more tools, I went back to fundamentals: <strong>protocols, DNS behavior, execution models, and reasoning structures</strong>.</p>
-<p>From email infrastructure to AI bots, from automation pipelines to custom SMTP systems—I build systems that don't just work, but <strong>work smart</strong>.</p>
-<div class="about-quote">"Take up one idea, make that one idea your life..." — Swami Vivekananda</div>
-</div>
-</div>
-</section>
-<section id="skills">
-<div class="section-header reveal"><div class="section-label">002 — Skills</div><h2>Tech Stack & <span class="muted">Expertise</span></h2></div>
-<div class="skills-wrapper reveal">
-<div class="skills-category"><div class="skills-category-title">Languages</div><div class="skills-grid">
-<span class="skill-tag highlight">Python</span><span class="skill-tag highlight">Go</span><span class="skill-tag">PHP</span><span class="skill-tag">JavaScript</span><span class="skill-tag">TypeScript</span><span class="skill-tag">Bash</span>
-</div></div>
-<div class="skills-category"><div class="skills-category-title">Frameworks & Libraries</div><div class="skills-grid">
-<span class="skill-tag highlight">FastAPI</span><span class="skill-tag highlight">React</span><span class="skill-tag">Node.js</span><span class="skill-tag highlight">LangChain</span><span class="skill-tag highlight">Transformers</span><span class="skill-tag">Embeddings</span>
-</div></div>
-<div class="skills-category"><div class="skills-category-title">Infrastructure & DevOps</div><div class="skills-grid">
-<span class="skill-tag highlight">Docker</span><span class="skill-tag">VPS Management</span><span class="skill-tag highlight">Cloudflare Workers</span><span class="skill-tag highlight">KumoMTA</span><span class="skill-tag">Linux Administration</span><span class="skill-tag">Nginx</span>
-</div></div>
-<div class="skills-category"><div class="skills-category-title">Databases</div><div class="skills-grid">
-<span class="skill-tag">PostgreSQL</span><span class="skill-tag">MySQL</span><span class="skill-tag highlight">Vector Databases</span>
-</div></div>
-<div class="skills-category"><div class="skills-category-title">Email & DNS</div><div class="skills-grid">
-<span class="skill-tag highlight">SPF</span><span class="skill-tag highlight">DKIM</span><span class="skill-tag highlight">DMARC</span><span class="skill-tag highlight">IP Warmup</span><span class="skill-tag highlight">Deliverability</span><span class="skill-tag highlight">SMTP Systems</span><span class="skill-tag highlight">Blacklist Monitoring</span>
-</div></div>
-<div class="skills-category"><div class="skills-category-title">AI & Machine Learning</div><div class="skills-grid">
-<span class="skill-tag highlight">RAG Systems</span><span class="skill-tag highlight">Prompt Engineering</span><span class="skill-tag highlight">Context Engineering</span><span class="skill-tag highlight">LLM APIs</span><span class="skill-tag">Dataset Training</span><span class="skill-tag">AI Guardrails</span>
-</div></div>
-</div>
-</section>
-<section id="experience">
-<div class="section-header reveal"><div class="section-label">003 — Experience</div><h2>Where I've <span class="muted">Worked</span></h2></div>
-<div class="experience-grid reveal">
-<div class="experience-card"><div class="experience-header"><span class="experience-company">Bengal Skill Academy</span><span class="experience-period">Co-founder</span></div><div class="experience-role">Context Engineer & AI Developer</div><p class="experience-description">Co-founded and built AI-driven educational tools. Specialize in integrating AI into real-world applications, developing RAG systems, and creating context-aware assistants for learning platforms.</p></div>
-<div class="experience-card"><div class="experience-header"><span class="experience-company">Publishing Company</span><span class="experience-period">Current</span></div><div class="experience-role">Context Engineer & Developer</div><p class="experience-description">Working on AI integration, automation systems, and technical infrastructure. Building tools that enhance content workflows and streamline publishing operations.</p></div>
-</div>
-<div class="section-header reveal" style="margin-top:4rem"><div class="section-label">004 — Expertise</div><h2>What I <span class="muted">Build</span></h2></div>
-<div class="expertise-grid reveal">
-<div class="expertise-card"><div class="expertise-icon"><span class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span></div><h3>Email Infrastructure</h3><p>IP warmup, deliverability optimization, custom SMTP creation, blacklist monitoring, and DNS record management.</p></div>
-<div class="expertise-card"><div class="expertise-icon"><span class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/><circle cx="7.5" cy="14.5" r="1.5"/><circle cx="16.5" cy="14.5" r="1.5"/></svg></span></div><h3>AI Systems</h3><p>RAG implementations, context-aware chatbots, prompt engineering, and AI guardrails. Building AI that knows its limits.</p></div>
-<div class="expertise-card"><div class="expertise-icon"><span class="icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span></div><h3>Automation</h3><p>Python-based humanized browsing, event-driven workflows, and custom verification platforms.</p></div>
-<div class="expertise-card"><div class="expertise-icon"><span class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></span></div><h3>Infrastructure</h3><p>Self-managed VPS, Docker deployments, Cloudflare Workers, and production-grade system architecture.</p></div>
-</div>
-</section>
-<section>
-<div class="section-header reveal"><div class="section-label">005 — Philosophy</div><h2>On Building <span class="muted">Systems</span></h2></div>
-<div class="philosophy-grid reveal">
-<div class="philosophy-card"><div class="philosophy-number">01</div><blockquote>AI is not intelligence in motion. It is memory, probability, and structure—moving fast enough to feel alive.</blockquote><cite>— On the nature of AI</cite></div>
-<div class="philosophy-card"><div class="philosophy-number">02</div><blockquote>Most failures in AI are not model failures. They are context failures.</blockquote><cite>— On debugging AI systems</cite></div>
-<div class="philosophy-card"><div class="philosophy-number">03</div><blockquote>Good prompts are not clever sentences. They are interfaces.</blockquote><cite>— On prompt engineering</cite></div>
-<div class="philosophy-card"><div class="philosophy-number">04</div><blockquote>When AI works, it disappears. What remains is a system that feels calm.</blockquote><cite>— On good design</cite></div>
-<div class="philosophy-card"><div class="philosophy-number">05</div><blockquote>Intelligence is not output. It is restraint.</blockquote><cite>— On building with AI</cite></div>
-<div class="philosophy-card"><div class="philosophy-number">06</div><blockquote>Scale does not fix ambiguity. It amplifies it.</blockquote><cite>— On system design</cite></div>
-</div>
-</section>
-<section id="projects">
-<div class="section-header reveal"><div class="section-label">006 — Projects</div><h2>Public <span class="muted">Work</span></h2></div>
-<div class="projects-grid reveal">
-<div class="project-card">
-<div class="project-header"><div class="project-icon"><span class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span></div>
-<div class="project-links"><a href="https://github.com/pulak-ranjan/kumomta-ui" class="project-link" target="_blank" title="GitHub"><span class="icon icon-filled"><svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></span></a></div></div>
-<div class="project-content"><h3>KumoMTA UI</h3><p>Production-grade control panel for KumoMTA mail infrastructure. Manage domains, senders, DKIM keys, relay IPs, bounce accounts with AI-assisted monitoring.</p><div class="project-tech"><span>Go</span><span>React</span><span>Node.js</span><span>JWT</span></div></div>
-</div>
-<div class="project-card">
-<div class="project-header"><div class="project-icon"><span class="icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span></div>
-<div class="project-links"><a href="https://github.com/pulak-ranjan/youble-youtube-trans-api" class="project-link" target="_blank" title="GitHub"><span class="icon icon-filled"><svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></span></a></div></div>
-<div class="project-content"><h3>Youble Transcript API</h3><p>PHP library to fetch, translate, and format YouTube captions. Supports language cascade, auto/manual subtitles, multiple output formats (JSON, SRT, WebVTT).</p><div class="project-tech"><span>PHP</span><span>Composer</span><span>PSR-4</span><span>CLI</span></div></div>
-</div>
-<div class="project-card">
-<div class="project-header"><div class="project-icon"><span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span></div>
-<div class="project-links"><a href="https://github.com/pulak-ranjan/pass-gen" class="project-link" target="_blank" title="GitHub"><span class="icon icon-filled"><svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></span></a>
-<a href="https://pulak-ranjan.github.io/pass-gen/" class="project-link" target="_blank" title="Live Demo"><span class="icon"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></a></div></div>
-<div class="project-content"><h3>Pass-Gen</h3><p>Lightweight, accessible password generator with multiple modes. Features strength meter, keyboard shortcuts, and popup mode. Zero dependencies.</p><div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
-</div>
-</div>
-</section>
-<section id="contact">
-<div class="section-header reveal"><div class="section-label">007 — Contact</div><h2>Let's Build <span class="muted">Something Real</span></h2></div>
-<div class="contact-grid reveal">
-<div class="contact-info"><p>I'm interested in projects that require reliability, not just features. For collaboration, consulting, or system design work—let's talk.</p><a href="mailto:cloudnesh@gmail.com" class="contact-email">cloudnesh@gmail.com</a></div>
-<div class="contact-links">
-<a href="https://github.com/pulak-ranjan" class="contact-link" target="_blank"><div class="contact-link-content"><span class="contact-link-label">GitHub</span><span class="contact-link-value">github.com/pulak-ranjan</span></div><span class="contact-link-arrow">→</span></a>
-<a href="https://in.linkedin.com/in/pulak-ranjan" class="contact-link" target="_blank"><div class="contact-link-content"><span class="contact-link-label">LinkedIn</span><span class="contact-link-value">in.linkedin.com/in/pulak-ranjan</span></div><span class="contact-link-arrow">→</span></a>
-<a href="https://x.com/pulak09" class="contact-link" target="_blank"><div class="contact-link-content"><span class="contact-link-label">X / Twitter</span><span class="contact-link-value">x.com/pulak09</span></div><span class="contact-link-arrow">→</span></a>
-<a href="https://bengalskillacademy.in" class="contact-link" target="_blank"><div class="contact-link-content"><span class="contact-link-label">Bengal Skill Academy</span><span class="contact-link-value">bengalskillacademy.in</span></div><span class="contact-link-arrow">→</span></a>
-</div>
-</div>
-</section>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="status-badge">SYSTEM ONLINE — READY FOR INPUT</div>
+        <h1>
+          <span class="line">Building</span>
+          <span class="line">Systems That</span>
+          <span class="line"><span class="highlight">Hold</span>.</span>
+        </h1>
+        <p class="hero-tagline">Self-taught developer specializing in infrastructure, email systems, and AI-powered solutions. I build things that don't break at 3 AM.</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">VIEW_PROJECTS →</a>
+          <a href="#contact" class="btn btn-secondary">GET_IN_TOUCH</a>
+        </div>
+      </div>
+      <div class="hero-terminal">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dot red"></div>
+            <div class="terminal-dot yellow"></div>
+            <div class="terminal-dot green"></div>
+            <span class="terminal-title">root@pulak-system ~ </span>
+            <button class="terminal-fullscreen" id="terminalFullscreenBtn" title="Fullscreen">
+              <span class="icon"><svg viewBox="0 0 24 24"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+            </button>
+          </div>
+          <div class="terminal-body" id="heroTerminalBody">
+            <div id="heroOutput"></div>
+            <div class="terminal-input-line">
+              <span class="ht-prompt">$</span>
+              <input type="text" class="terminal-input" id="heroInput" placeholder="type a command..." autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Terminal Button -->
+      <button class="btn btn-terminal mobile-terminal-btn" id="heroTerminalBtn">>_ OPEN TERMINAL</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-header reveal">
+      <div class="section-label">001 — About</div>
+      <h2>Pharmacy to Programming.<br><span class="muted">An Unexpected Journey.</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="profile-card">
+          <div class="profile-card-header">
+            <div class="profile-avatar">PR</div>
+            <div class="profile-name">Pulak Ranjan</div>
+            <div class="profile-title">Systems & AI Engineer</div>
+          </div>
+          <div class="profile-card-body">
+            <div class="profile-meta">
+              <div class="profile-meta-item">
+                <span class="profile-meta-icon"><span class="icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span></span>
+                Hyderabad, India
+              </div>
+              <div class="profile-meta-item">
+                <span class="profile-meta-icon"><span class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span></span>
+                Co-founder @ Bengal Skill Academy
+              </div>
+              <div class="profile-meta-item">
+                <span class="profile-meta-icon"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span></span>
+                Pharmacy Background
+              </div>
+              <div class="profile-meta-item">
+                <span class="profile-meta-icon"><span class="icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span></span>
+                Self-Taught Developer
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <p>I'm a self-taught developer with a passion for logic, automation, and AI-driven solutions. I studied pharmacy but unexpectedly fell in love with technology—and never looked back.</p>
+        <p>Currently working as a <strong>Context Engineer and AI Specialist</strong> at Bengal Skill Academy (which I proudly co-founded), I specialize in integrating AI into real-world applications using Python, PHP, Go, and modern tools.</p>
+        <p>My work started with real failures—emails landing in spam, automation breaking silently, AI systems producing confident but wrong outputs. Instead of stacking more tools, I went back to fundamentals: <strong>protocols, DNS behavior, execution models, and reasoning structures</strong>.</p>
+        <p>From email infrastructure to AI bots, from automation pipelines to custom SMTP systems—I build systems that don't just work, but <strong>work smart</strong>.</p>
+        <div class="about-quote">"The best system is one you forget exists — because it just works."</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="section-header reveal">
+      <div class="section-label">002 — Skills</div>
+      <h2>Tools of the Trade.<br><span class="muted">What I Work With.</span></h2>
+    </div>
+    <div class="skills-wrapper reveal">
+      <div class="skills-category">
+        <div class="skills-category-title">Languages</div>
+        <div class="skills-grid">
+          <span class="skill-tag highlight">Python</span>
+          <span class="skill-tag highlight">Go</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Bash</span>
+        </div>
+      </div>
+      <div class="skills-category">
+        <div class="skills-category-title">Frameworks & Libraries</div>
+        <div class="skills-grid">
+          <span class="skill-tag highlight">FastAPI</span>
+          <span class="skill-tag highlight">React</span>
+          <span class="skill-tag highlight">LangChain</span>
+          <span class="skill-tag highlight">Transformers</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Laravel</span>
+        </div>
+      </div>
+      <div class="skills-category">
+        <div class="skills-category-title">Infrastructure & DevOps</div>
+        <div class="skills-grid">
+          <span class="skill-tag highlight">Docker</span>
+          <span class="skill-tag">VPS Management</span>
+          <span class="skill-tag highlight">Cloudflare Workers</span>
+          <span class="skill-tag highlight">KumoMTA</span>
+          <span class="skill-tag">Linux Administration</span>
+          <span class="skill-tag">Git</span>
+        </div>
+      </div>
+      <div class="skills-category">
+        <div class="skills-category-title">Databases</div>
+        <div class="skills-grid">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag highlight">Vector Databases</span>
+        </div>
+      </div>
+      <div class="skills-category">
+        <div class="skills-category-title">Email & DNS</div>
+        <div class="skills-grid">
+          <span class="skill-tag highlight">SPF</span>
+          <span class="skill-tag highlight">DKIM</span>
+          <span class="skill-tag highlight">DMARC</span>
+          <span class="skill-tag highlight">IP Warmup</span>
+          <span class="skill-tag highlight">Deliverability</span>
+          <span class="skill-tag highlight">SMTP Systems</span>
+          <span class="skill-tag highlight">Blacklist Monitoring</span>
+        </div>
+      </div>
+      <div class="skills-category">
+        <div class="skills-category-title">AI & Machine Learning</div>
+        <div class="skills-grid">
+          <span class="skill-tag highlight">RAG Systems</span>
+          <span class="skill-tag highlight">Prompt Engineering</span>
+          <span class="skill-tag highlight">Context Engineering</span>
+          <span class="skill-tag highlight">LLM APIs</span>
+          <span class="skill-tag">Fine-tuning</span>
+          <span class="skill-tag">Embeddings</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="section-header reveal">
+      <div class="section-label">003 — Experience</div>
+      <h2>Where I've Built.<br><span class="muted">Real Work, Real Impact.</span></h2>
+    </div>
+    <div class="experience-grid reveal">
+      <div class="experience-card">
+        <div class="experience-header">
+          <div class="experience-company">Bengal Skill Academy</div>
+          <div class="experience-period">2024 - Present</div>
+        </div>
+        <div class="experience-role">Co-founder & AI Developer</div>
+        <div class="experience-description">Building AI-powered educational tools and infrastructure. Developing systems that make learning more accessible and effective through intelligent automation.</div>
+      </div>
+      <div class="experience-card">
+        <div class="experience-header">
+          <div class="experience-company">Publishing Company</div>
+          <div class="experience-period">2024 - Present</div>
+        </div>
+        <div class="experience-role">Context Engineer</div>
+        <div class="experience-description">Designing and implementing AI integration strategies. Creating context-aware systems that enhance content workflows and automate repetitive processes.</div>
+      </div>
+      <div class="experience-card">
+        <div class="experience-header">
+          <div class="experience-company">Freelance</div>
+          <div class="experience-period">2022 - Present</div>
+        </div>
+        <div class="experience-role">Systems & Email Specialist</div>
+        <div class="experience-description">Email infrastructure setup, deliverability optimization, and custom automation solutions for clients across various industries.</div>
+      </div>
+      <div class="experience-card">
+        <div class="experience-header">
+          <div class="experience-company">Self-Directed</div>
+          <div class="experience-period">2020 - Present</div>
+        </div>
+        <div class="experience-role">Independent Developer</div>
+        <div class="experience-description">Continuous learning and building. From pharmacy studies to production systems — learning by doing, breaking things, and fixing them.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Section -->
+  <section id="expertise">
+    <div class="section-header reveal">
+      <div class="section-label">004 — Expertise</div>
+      <h2>What I Do Best.<br><span class="muted">Core Competencies.</span></h2>
+    </div>
+    <div class="expertise-grid reveal">
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h3v3H7zM14 7h3v3h-3zM7 14h3v3H7zM14 14h3v3h-3z"/></svg></span>
+        </div>
+        <h3>Infrastructure</h3>
+        <p>VPS setup, Docker containers, and systems that don't need babysitting.</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+        </div>
+        <h3>Email Systems</h3>
+        <p>Deliverability, authentication, and infrastructure that lands in inboxes.</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg></span>
+        </div>
+        <h3>AI Integration</h3>
+        <p>RAG systems, chatbots, and AI that solves actual problems.</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+        </div>
+        <h3>Automation</h3>
+        <p>Python scripts, browser automation, and workflows that run themselves.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section id="philosophy">
+    <div class="section-header reveal">
+      <div class="section-label">005 — Philosophy</div>
+      <h2>How I Work.<br><span class="muted">Principles Over Process.</span></h2>
+    </div>
+    <div class="philosophy-grid reveal">
+      <div class="philosophy-card">
+        <div class="philosophy-number">01</div>
+        <h3>Reliability First</h3>
+        <p>A system that works 99% of the time fails too often. I aim for infrastructure you can forget exists.</p>
+      </div>
+      <div class="philosophy-card">
+        <div class="philosophy-number">02</div>
+        <h3>Simple > Clever</h3>
+        <p>The best code is boring code. Clever solutions create clever problems. I choose readable over impressive.</p>
+      </div>
+      <div class="philosophy-card">
+        <div class="philosophy-number">03</div>
+        <h3>Learn by Building</h3>
+        <p>Tutorials teach concepts. Production teaches lessons. I learn by deploying real things for real users.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <div class="section-label">006 — Projects</div>
+      <h2>Selected Work.<br><span class="muted">Things I've Built.</span></h2>
+    </div>
+    <div class="projects-grid reveal">
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon"><span class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span></div>
+          <div class="project-links">
+            <a href="https://github.com/pulak-ranjan/kumomta-ui" class="project-link" target="_blank" title="GitHub">
+              <span class="icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+            </a>
+          </div>
+        </div>
+        <h3>KumoMTA UI</h3>
+        <p class="project-description">Control panel for KumoMTA email infrastructure. Real-time monitoring, configuration management, and queue visualization.</p>
+        <div class="project-tech">
+          <span>Go</span>
+          <span>React</span>
+          <span>Node.js</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon"><span class="icon"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></span></div>
+          <div class="project-links">
+            <a href="https://github.com/pulak-ranjan/youble-transcript-api" class="project-link" target="_blank" title="GitHub">
+              <span class="icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+            </a>
+            <a href="https://packagist.org/packages/cloudnesh/youble-transcript-api" class="project-link" target="_blank" title="Packagist">
+              <span class="icon"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+            </a>
+          </div>
+        </div>
+        <h3>Youble Transcript API</h3>
+        <p class="project-description">PHP library for extracting YouTube video captions and transcripts. Clean API, Composer-ready, no authentication required.</p>
+        <div class="project-tech">
+          <span>PHP</span>
+          <span>Composer</span>
+          <span>API</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon"><span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span></div>
+          <div class="project-links">
+            <a href="https://github.com/pulak-ranjan/Pass-Gen" class="project-link" target="_blank" title="GitHub">
+              <span class="icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+            </a>
+            <a href="https://pulak-ranjan.github.io/Pass-Gen/" class="project-link" target="_blank" title="Live Demo">
+              <span class="icon"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+            </a>
+          </div>
+        </div>
+        <h3>Pass-Gen</h3>
+        <p class="project-description">Secure password generator with customizable options. Client-side only, no data leaves your browser.</p>
+        <div class="project-tech">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-header reveal">
+      <div class="section-label">007 — Contact</div>
+      <h2>Let's Connect.<br><span class="muted">Start a Conversation.</span></h2>
+    </div>
+    <div class="contact-grid reveal">
+      <a href="/cdn-cgi/l/email-protection#beddd2d1cbdad0dbcdd6fed9d3dfd7d290ddd1d3" class="contact-link">
+        <div class="contact-link-content">
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-value"><span class="__cf_email__" data-cfemail="0566696a70616b60766d456268646c692b666a68">[email&#160;protected]</span></span>
+        </div>
+        <span class="contact-link-arrow">→</span>
+      </a>
+      <a href="https://github.com/pulak-ranjan" class="contact-link" target="_blank">
+        <div class="contact-link-content">
+          <span class="contact-link-label">GitHub</span>
+          <span class="contact-link-value">github.com/pulak-ranjan</span>
+        </div>
+        <span class="contact-link-arrow">→</span>
+      </a>
+      <a href="https://in.linkedin.com/in/pulak-ranjan" class="contact-link" target="_blank">
+        <div class="contact-link-content">
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-value">linkedin.com/in/pulak-ranjan</span>
+        </div>
+        <span class="contact-link-arrow">→</span>
+      </a>
+    </div>
+  </section>
 </main>
-<footer><div class="container"><div class="footer-content"><div class="footer-left">2024 Pulak Ranjan — Systems That Hold</div><div class="footer-right"><a href="https://github.com/pulak-ranjan">GitHub</a><a href="https://in.linkedin.com/in/pulak-ranjan">LinkedIn</a><a href="https://x.com/pulak09">Twitter</a></div></div></div></footer>
-<button class="terminal-toggle" id="terminal-toggle" title="Open Terminal">>_</button>
-<div class="terminal-modal" id="terminal-modal">
-<div class="terminal">
-<div class="terminal-header"><div class="terminal-dot red"></div><div class="terminal-dot yellow"></div><div class="terminal-dot green"></div><span class="terminal-title">pulak@api ~ v1.0.0</span></div>
-<div class="terminal-body" id="modal-terminal-body">
-<div class="terminal-output" id="modal-output">
-<div class="terminal-line"><span class="t-success">PULAK_RANJAN API v1.0.0</span></div>
-<div class="terminal-line"><span class="t-comment"># Interactive portfolio terminal</span></div>
-<div class="terminal-line"><span class="t-comment"># Type 'help' to see commands</span></div>
-<div class="terminal-line"></div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-left">2024 Pulak Ranjan — Systems That Hold</div>
+      <div class="footer-right">
+        <a href="https://github.com/pulak-ranjan">GitHub</a>
+        <a href="https://in.linkedin.com/in/pulak-ranjan">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Chatbot Toggle -->
+<button class="terminal-toggle" id="terminalToggle" title="Open Chatbot">>_</button>
+
+<!-- Chatbot Modal -->
+<div class="terminal-modal" id="terminalModal">
+  <div class="terminal">
+    <div class="terminal-header">
+      <div class="terminal-dot red"></div>
+      <div class="terminal-dot yellow"></div>
+      <div class="terminal-dot green"></div>
+      <span class="terminal-title">pulak-bot ~ ask me anything</span>
+    </div>
+    <div class="terminal-body" id="chatBody">
+      <div id="chatOutput">
+        <div class="cb-line"><span class="cb-highlight">Welcome!</span> <span class="cb-dim">Type 'help' for commands.</span></div>
+      </div>
+      <div class="terminal-input-line">
+        <span class="cb-prompt">→</span>
+        <input type="text" class="terminal-input" id="chatInput" placeholder="ask something..." autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+  </div>
 </div>
-<div class="terminal-input-line"><span class="t-prompt">$</span><input type="text" class="terminal-input" id="modal-terminal-input" placeholder="type a command..." autocomplete="off" spellcheck="false"></div>
+
+<!-- Hero Terminal Modal (Larger Popup) -->
+<div class="hero-terminal-modal" id="heroTerminalModal">
+  <div class="hero-terminal-overlay" id="heroTerminalOverlay"></div>
+  <div class="hero-terminal-container">
+    <div class="terminal large-terminal">
+      <div class="terminal-header">
+        <div class="terminal-dot red"></div>
+        <div class="terminal-dot yellow"></div>
+        <div class="terminal-dot green"></div>
+        <span class="terminal-title">root@pulak-system ~ </span>
+        <button class="terminal-close" id="heroTerminalClose">×</button>
+      </div>
+      <div class="terminal-body" id="modalTerminalBody">
+        <div id="modalOutput"></div>
+        <div class="terminal-input-line">
+          <span class="ht-prompt">$</span>
+          <input type="text" class="terminal-input" id="modalInput" placeholder="type a command..." autocomplete="off" spellcheck="false">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
+
 <script>
-const commands={help:{response:()=>({type:"text",content:`<span class="t-success">Available Commands:</span>
-  <span class="t-key">whoami</span>      - About me
-  <span class="t-key">skills</span>      - Technical skills
-  <span class="t-key">projects</span>    - My projects
-  <span class="t-key">contact</span>     - Contact info
-  <span class="t-key">experience</span>  - Work experience
-  <span class="t-key">philosophy</span>  - My thoughts on AI
-  <span class="t-key">stack</span>       - Current tech stack
-  <span class="t-key">social</span>      - Social links
-  <span class="t-key">clear</span>       - Clear terminal
-  <span class="t-key">hire</span>        - Why hire me`})},whoami:{response:()=>({type:"json",content:{name:"Pulak Ranjan",role:"Systems & AI Engineer",location:"India",background:"Pharmacy > Self-taught Developer",currently:"Co-founder @ Bengal Skill Academy",focus:["Infrastructure","Email Systems","AI/ML","Automation"],philosophy:"Building systems that hold"}})},skills:{response:()=>({type:"json",content:{languages:["Python","Go","PHP","JavaScript","TypeScript"],frameworks:["FastAPI","React","Node.js","LangChain","Transformers"],infrastructure:["Docker","VPS","Cloudflare Workers","KumoMTA"],databases:["PostgreSQL","MySQL","Vector DBs"],email:["SPF","DKIM","DMARC","IP Warmup","Deliverability","SMTP"],ai:["RAG","Prompt Engineering","Context Engineering","LLM APIs"]}})},projects:{response:()=>({type:"json",content:{kumomta_ui:{description:"Production MTA control panel",tech:["Go","React","Node.js"],url:"github.com/pulak-ranjan/kumomta-ui"},youble_api:{description:"YouTube transcript extraction library",tech:["PHP","Composer"],url:"github.com/pulak-ranjan/youble-youtube-trans-api"},pass_gen:{description:"Secure password generator",tech:["HTML","CSS","JS"],url:"pulak-ranjan.github.io/pass-gen"}}})},contact:{response:()=>({type:"json",content:{email:"cloudnesh@gmail.com",github:"github.com/pulak-ranjan",linkedin:"linkedin.com/in/pulak-ranjan",twitter:"x.com/pulak09",company:"bengalskillacademy.in"}})},experience:{response:()=>({type:"json",content:{current:[{company:"Bengal Skill Academy",role:"Co-founder & AI Developer",focus:"AI-driven educational tools"},{company:"Publishing Company",role:"Context Engineer",focus:"AI integration & automation"}],expertise:["Email Infrastructure & Deliverability","Custom SMTP & IP Warmup","RAG & AI Bot Development","Automation & Browser Scripting"]}})},philosophy:{response:()=>({type:"json",content:{quotes:["AI is memory, probability, structure—moving fast enough to feel alive.","Most AI failures are context failures.","Good prompts are interfaces, not clever sentences.","When AI works, it disappears.","Intelligence is not output. It is restraint.","Scale amplifies ambiguity."],principle:"Reliability over cleverness"}})},stack:{response:()=>({type:"json",content:{primary:{backend:"Python (FastAPI) + Go",frontend:"React (TypeScript)",ai:"LangChain + Transformers"},infrastructure:{hosting:"Self-managed VPS",edge:"Cloudflare Workers",containers:"Docker"},email:{mta:"KumoMTA",auth:"SPF + DKIM + DMARC",monitoring:"Custom IP/Blacklist tools"}}})},social:{response:()=>({type:"text",content:`<span class="t-key">GitHub:</span>    <a href="https://github.com/pulak-ranjan" target="_blank" style="color:var(--accent)">github.com/pulak-ranjan</a>
-<span class="t-key">LinkedIn:</span>  <a href="https://linkedin.com/in/pulak-ranjan" target="_blank" style="color:var(--accent)">linkedin.com/in/pulak-ranjan</a>
-<span class="t-key">Twitter:</span>   <a href="https://x.com/pulak09" target="_blank" style="color:var(--accent)">x.com/pulak09</a>
-<span class="t-key">Company:</span>   <a href="https://bengalskillacademy.in" target="_blank" style="color:var(--accent)">bengalskillacademy.in</a>`})},hire:{response:()=>({type:"text",content:`<span class="t-success">Why Work With Me:</span>
+// HERO TERMINAL (Inline - Desktop)
+const heroEl = {
+  output: document.getElementById('heroOutput'),
+  input: document.getElementById('heroInput'),
+  body: document.getElementById('heroTerminalBody')
+};
 
-<span class="t-key">Email Deliverability</span>
-  - IP warmup & reputation management
-  - SPF, DKIM, DMARC configuration
-  - Blacklist monitoring & resolution
-  - Custom SMTP infrastructure
+// MODAL TERMINAL (Fullscreen)
+const modalEl = {
+  output: document.getElementById('modalOutput'),
+  input: document.getElementById('modalInput'),
+  body: document.getElementById('modalTerminalBody')
+};
 
-<span class="t-key">AI Integration</span>
-  - RAG systems & context engineering
-  - Custom chatbots & assistants
-  - Prompt engineering & guardrails
-  - LLM API integration
+const heroTerminalModal = document.getElementById('heroTerminalModal');
+const heroTerminalBtn = document.getElementById('heroTerminalBtn');
+const terminalFullscreenBtn = document.getElementById('terminalFullscreenBtn');
+const heroTerminalClose = document.getElementById('heroTerminalClose');
+const heroTerminalOverlay = document.getElementById('heroTerminalOverlay');
 
-<span class="t-key">Automation</span>
-  - Python-based workflows
-  - Browser automation
-  - Event-driven systems
+// Open hero terminal modal
+function openHeroTerminalModal() {
+  heroTerminalModal.classList.add('active');
+  setTimeout(() => {
+    if (modalEl.input) modalEl.input.focus();
+    runModalBootSequence();
+  }, 100);
+}
 
-<span class="t-comment"># Contact: cloudnesh@gmail.com</span>`})},clear:{response:()=>({type:"clear"})}};
-function formatJSON(e,t=0){const n="  ".repeat(t),o="  ".repeat(t+1);if(Array.isArray(e))return 0===e.length?"[]":`[\n${e.map(e=>"object"==typeof e?o+formatJSON(e,t+1):o+`<span class="t-string">"${e}"</span>`).join(",\n")}\n${n}]`;if("object"==typeof e&&null!==e){return`{\n${Object.entries(e).map(([e,n])=>{let r;return r="string"==typeof n?`<span class="t-string">"${n}"</span>`:"number"==typeof n?`<span class="t-output">${n}</span>`:Array.isArray(n)||"object"==typeof n?formatJSON(n,t+1):n,`${o}<span class="t-key">"${e}"</span>: ${r}`}).join(",\n")}\n${n}}`}return e}
-function processCommand(e,t,n){const o=e.trim().toLowerCase();if(!o)return;const r=document.createElement("div");if(r.className="terminal-line",r.innerHTML=`<span class="t-prompt">$</span> <span class="t-cmd">${e}</span>`,t.appendChild(r),commands[o]){const e=commands[o].response();if("clear"===e.type)t.innerHTML=`<div class="terminal-line"><span class="t-comment"># Terminal cleared</span></div><div class="terminal-line"></div>`;else if("json"===e.type){const n=document.createElement("div");n.className="json-output",n.innerHTML=formatJSON(e.content),t.appendChild(n)}else{const n=document.createElement("div");n.className="terminal-line",n.innerHTML=e.content,t.appendChild(n)}}else{const e=document.createElement("div");e.className="terminal-line",e.innerHTML=`<span class="t-error">Command not found: ${o}</span>\n<span class="t-comment"># Type 'help' for available commands</span>`,t.appendChild(e)}const a=document.createElement("div");a.className="terminal-line",t.appendChild(a),n.scrollTop=n.scrollHeight}
-function setupTerminal(e,t,n){const o=document.getElementById(e),r=document.getElementById(t),a=document.getElementById(n);o&&r&&a&&o.addEventListener("keydown",e=>{"Enter"===e.key&&(processCommand(o.value,r,a),o.value="")})}
-setupTerminal("hero-terminal-input","hero-output","hero-terminal-body");setupTerminal("modal-terminal-input","modal-output","modal-terminal-body");
-const terminalToggle=document.getElementById("terminal-toggle"),terminalModal=document.getElementById("terminal-modal");terminalToggle&&terminalModal&&terminalToggle.addEventListener("click",()=>{terminalModal.classList.toggle("active"),terminalModal.classList.contains("active")&&document.getElementById("modal-terminal-input").focus()});
-document.addEventListener("keydown",e=>{"Escape"===e.key&&terminalModal&&terminalModal.classList.contains("active")&&terminalModal.classList.remove("active")});
-const mobileMenuBtn=document.getElementById("mobile-menu-btn"),mobileNav=document.getElementById("mobile-nav");mobileMenuBtn&&mobileNav&&(mobileMenuBtn.addEventListener("click",()=>{mobileNav.classList.toggle("active"),mobileMenuBtn.textContent=mobileNav.classList.contains("active")?"CLOSE":"MENU"}),mobileNav.querySelectorAll("a").forEach(e=>{e.addEventListener("click",()=>{mobileNav.classList.remove("active"),mobileMenuBtn.textContent="MENU"})}));
-if(window.innerWidth>900){const e=document.querySelector(".cursor"),t=document.querySelector(".cursor-dot"),n=document.querySelector(".cursor-glow");e&&t&&n&&(document.addEventListener("mousemove",o=>{e.style.left=o.clientX+"px",e.style.top=o.clientY+"px",t.style.left=o.clientX+"px",t.style.top=o.clientY+"px",n.style.left=o.clientX+"px",n.style.top=o.clientY+"px"}),document.querySelectorAll("a,button,.skill-tag,.project-card,.experience-card,.philosophy-card,.contact-link,input").forEach(t=>{t.addEventListener("mouseenter",()=>e.classList.add("hover")),t.addEventListener("mouseleave",()=>e.classList.remove("hover"))}))}
-const observer=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&e.target.classList.add("active")})},{threshold:.1,rootMargin:"0px 0px -50px 0px"});document.querySelectorAll(".reveal").forEach(e=>observer.observe(e));
-document.querySelectorAll("nav a,.mobile-nav a,.hero-ctas a").forEach(e=>{e.addEventListener("click",function(e){const t=this.getAttribute("href");if(t.startsWith("#")){e.preventDefault();const n=document.querySelector(t);n&&n.scrollIntoView({behavior:"smooth",block:"start"})}})});
-const h1=document.querySelector("h1");if(h1){h1.querySelectorAll(".line").forEach(e=>{const t=e.textContent,n=e.querySelector(".highlight");if(e.innerHTML="",n){[...t].forEach((t,n)=>{const o=document.createElement("span");o.className="char",n<4&&o.classList.add("highlight-char"),o.textContent=" "===t?"\xa0":t,o.style.transitionDelay=.02*n+"s",n<4&&(o.style.color="var(--accent)"),e.appendChild(o)})}else[...t].forEach((t,n)=>{const o=document.createElement("span");o.className="char",o.textContent=" "===t?"\xa0":t,o.style.transitionDelay=.02*n+"s",e.appendChild(o)})})}
+// Mobile button opens modal
+if (heroTerminalBtn) {
+  heroTerminalBtn.onclick = openHeroTerminalModal;
+}
+
+// Fullscreen button opens modal
+if (terminalFullscreenBtn) {
+  terminalFullscreenBtn.onclick = openHeroTerminalModal;
+}
+
+// Close hero terminal modal
+if (heroTerminalClose) {
+  heroTerminalClose.onclick = () => heroTerminalModal.classList.remove('active');
+}
+if (heroTerminalOverlay) {
+  heroTerminalOverlay.onclick = () => heroTerminalModal.classList.remove('active');
+}
+
+const heroCommands = {
+  help: [
+    {t: '', d: 100},
+    {t: '  Available commands:', c: 'ht-success'},
+    {t: '', d: 50},
+    {t: '  whoami     - About me', c: 'ht-gray'},
+    {t: '  skills     - Technical skills', c: 'ht-gray'},
+    {t: '  projects   - View projects', c: 'ht-gray'},
+    {t: '  contact    - Get in touch', c: 'ht-gray'},
+    {t: '  experience - Work history', c: 'ht-gray'},
+    {t: '  philosophy - How I work', c: 'ht-gray'},
+    {t: '  stack      - Tech stack', c: 'ht-gray'},
+    {t: '  social     - Social links', c: 'ht-gray'},
+    {t: '  hire       - Work with me', c: 'ht-gray'},
+    {t: '  clear      - Clear terminal', c: 'ht-gray'}
+  ],
+  whoami: [
+    {t: '', d: 100},
+    {t: '  PULAK RANJAN', c: 'ht-success'},
+    {t: '  ═══════════════════════════════', c: 'ht-dim'},
+    {t: '  Role: Systems & AI Engineer', c: 'ht-info'},
+    {t: '  Location: Hyderabad, India', c: 'ht-gray'},
+    {t: '  Focus: Infrastructure, Email, AI', c: 'ht-gray'},
+    {t: '', d: 50},
+    {t: '  "Building systems that hold."', c: 'ht-purple'}
+  ],
+  skills: [
+    {t: '', d: 100},
+    {t: '  TECHNICAL SKILLS', c: 'ht-success'},
+    {t: '  ═══════════════════════════════', c: 'ht-dim'},
+    {t: '  Languages:    Python, Go, PHP, JS, TS', c: 'ht-info'},
+    {t: '  Frameworks:   FastAPI, React, LangChain', c: 'ht-info'},
+    {t: '  Infra:        Docker, VPS, Cloudflare', c: 'ht-info'},
+    {t: '  Email:        SPF, DKIM, DMARC, KumoMTA', c: 'ht-info'},
+    {t: '  AI/ML:        RAG, Prompts, LLM APIs', c: 'ht-info'}
+  ],
+  projects: [
+    {t: '', d: 100},
+    {t: '  PROJECTS', c: 'ht-success'},
+    {t: '  ═══════════════════════════════', c: 'ht-dim'},
+    {t: '  [1] KumoMTA UI', c: 'ht-info'},
+    {t: '      Email infrastructure control panel', c: 'ht-gray'},
+    {t: '  [2] Youble Transcript API', c: 'ht-info'},
+    {t: '      YouTube caption extraction library', c: 'ht-gray'},
+    {t: '  [3] Pass-Gen', c: 'ht-info'},
+    {t: '      Secure password generator', c: 'ht-gray'}
+  ],
+  contact: [
+    {t: '', d: 100},
+    {t: '  CONTACT', c: 'ht-success'},
+    {t: '  ═══════════════════════════════', c: 'ht-dim'},
+    {t: '  EMAIL:    cloudnesh@gmail.com', c: 'ht-info'},
+    {t: '  GITHUB:   github.com/pulak-ranjan', c: 'ht-info'},
+    {t: '  LINKEDIN: linkedin.com/in/pulak-ranjan', c: 'ht-info'}
+  ],
+  experience: [
+    {t: '', d: 100},
+    {t: '  EXPERIENCE', c: 'ht-success'},
+    {t: '  ═══════════════════════════════', c: 'ht-dim'},
+    {t: '  Bengal Skill Academy | Co-founder', c: 'ht-info'},
+    {t: '  └─ AI-powered educational tools', c: 'ht-gray'},
+    {t: '  Publishing Company | Context Engineer', c: 'ht-info'},
+    {t: '  └─ AI integration & automation', c: 'ht-gray'},
+    {t: '  Freelance | Systems Specialist', c: 'ht-info'},
+    {t: '  └─ Email & infrastructure solutions', c: 'ht-gray'}
+  ],
+  philosophy: [
+    {t: '', d: 100},
+    {t: '  PHILOSOPHY', c: 'ht-success'},
+    {t: '  ═══════════════════════════════', c: 'ht-dim'},
+    {t: '  01. Reliability First', c: 'ht-info'},
+    {t: '  02. Simple > Clever', c: 'ht-info'},
+    {t: '  03. Learn by Building', c: 'ht-info'},
+    {t: '', d: 50},
+    {t: '  Systems you can forget exist.', c: 'ht-purple'}
+  ],
+  stack: [
+    {t: '', d: 100},
+    {t: '  TECH STACK', c: 'ht-success'},
+    {t: '  ═══════════════════════════════', c: 'ht-dim'},
+    {t: '  Backend:   Python, Go, PHP', c: 'ht-info'},
+    {t: '  Frontend:  React, TypeScript', c: 'ht-info'},
+    {t: '  Database:  PostgreSQL, Vector DBs', c: 'ht-info'},
+    {t: '  DevOps:    Docker, Linux, Git', c: 'ht-info'},
+    {t: '  Email:     KumoMTA, Postfix', c: 'ht-info'},
+    {t: '  AI:        LangChain, OpenAI, RAG', c: 'ht-info'}
+  ],
+  social: [
+    {t: '', d: 100},
+    {t: '  SOCIAL LINKS', c: 'ht-success'},
+    {t: '  ═══════════════════════════════', c: 'ht-dim'},
+    {t: '  GITHUB:   github.com/pulak-ranjan', c: 'ht-info'},
+    {t: '  LINKEDIN: linkedin.com/in/pulak-ranjan', c: 'ht-info'}
+  ],
+  hire: [
+    {t: '', d: 100},
+    {t: '  WORK WITH ME', c: 'ht-success'},
+    {t: '  ═══════════════════════════════', c: 'ht-dim'},
+    {t: '  ✓ Email Deliverability & Infrastructure', c: 'ht-info'},
+    {t: '  ✓ AI Integration & RAG Systems', c: 'ht-info'},
+    {t: '  ✓ Python Automation', c: 'ht-info'},
+    {t: '  ✓ Custom Chatbots', c: 'ht-info'},
+    {t: '', d: 50},
+    {t: '  Contact: cloudnesh@gmail.com', c: 'ht-purple'}
+  ]
+};
+
+function heroType(lines, output, body) {
+  let i = 0;
+  function next() {
+    if (i >= lines.length) return;
+    const line = lines[i];
+    const div = document.createElement('div');
+    div.className = 'ht-line';
+    if (line.c) div.innerHTML = '<span class="' + line.c + '">' + line.t + '</span>';
+    else div.textContent = line.t;
+    output.appendChild(div);
+    body.scrollTop = body.scrollHeight;
+    i++;
+    setTimeout(next, line.d || 80);
+  }
+  next();
+}
+
+// Boot sequence for inline terminal (desktop)
+let inlineBootRan = false;
+function runBootSequence() {
+  if (inlineBootRan || !heroEl.output) return;
+  inlineBootRan = true;
+  heroType([
+    {t: '$ neofetch --mini', c: 'ht-cmd', d: 300},
+    {t: '', d: 200},
+    {t: '  ╭───────────────────────────────╮', c: 'ht-dim'},
+    {t: '  │   PULAK RANJAN               │', c: 'ht-success'},
+    {t: '  │   Systems & AI Engineer      │', c: 'ht-info'},
+    {t: '  ╰───────────────────────────────╯', c: 'ht-dim'},
+    {t: '', d: 100},
+    {t: '  OS:     Linux (Arch btw)', c: 'ht-gray'},
+    {t: '  Shell:  zsh + tmux', c: 'ht-gray'},
+    {t: '  Editor: Neovim', c: 'ht-gray'},
+    {t: '', d: 200},
+    {t: '$ status --current', c: 'ht-cmd', d: 300},
+    {t: '  [✓] Available for work', c: 'ht-success'},
+    {t: '  [✓] Systems operational', c: 'ht-success'},
+    {t: '', d: 200},
+    {t: '  Type "help" for commands', c: 'ht-purple'},
+    {t: '', d: 1200}
+  ], heroEl.output, heroEl.body);
+}
+
+// Boot sequence for modal terminal
+let modalBootRan = false;
+function runModalBootSequence() {
+  if (modalBootRan || !modalEl.output) return;
+  modalBootRan = true;
+  heroType([
+    {t: '$ neofetch --mini', c: 'ht-cmd', d: 300},
+    {t: '', d: 200},
+    {t: '  ╭───────────────────────────────╮', c: 'ht-dim'},
+    {t: '  │   PULAK RANJAN               │', c: 'ht-success'},
+    {t: '  │   Systems & AI Engineer      │', c: 'ht-info'},
+    {t: '  ╰───────────────────────────────╯', c: 'ht-dim'},
+    {t: '', d: 100},
+    {t: '  OS:     Linux (Arch btw)', c: 'ht-gray'},
+    {t: '  Shell:  zsh + tmux', c: 'ht-gray'},
+    {t: '  Editor: Neovim', c: 'ht-gray'},
+    {t: '', d: 200},
+    {t: '$ status --current', c: 'ht-cmd', d: 300},
+    {t: '  [✓] Available for work', c: 'ht-success'},
+    {t: '  [✓] Systems operational', c: 'ht-success'},
+    {t: '', d: 200},
+    {t: '  Type "help" for commands', c: 'ht-purple'},
+    {t: '', d: 1200}
+  ], modalEl.output, modalEl.body);
+}
+
+// Run boot sequence on page load (for desktop inline terminal)
+setTimeout(runBootSequence, 600);
+
+heroEl.input.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    const cmd = heroEl.input.value.trim().toLowerCase();
+    heroEl.input.value = '';
+    const cmdDiv = document.createElement('div');
+    cmdDiv.className = 'ht-line';
+    cmdDiv.innerHTML = '<span class="ht-prompt">$</span> <span class="ht-cmd">' + cmd + '</span>';
+    heroEl.output.appendChild(cmdDiv);
+    if (cmd === 'clear') {
+      heroEl.output.innerHTML = '';
+    } else if (heroCommands[cmd]) {
+      heroType(heroCommands[cmd], heroEl.output, heroEl.body);
+    } else if (cmd) {
+      const err = document.createElement('div');
+      err.className = 'ht-line';
+      err.innerHTML = '<span class="ht-error">command not found: ' + cmd + '</span>';
+      heroEl.output.appendChild(err);
+    }
+    heroEl.body.scrollTop = heroEl.body.scrollHeight;
+  }
+});
+
+// Modal Terminal Input Handler
+if (modalEl.input) {
+  modalEl.input.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      const cmd = modalEl.input.value.trim().toLowerCase();
+      modalEl.input.value = '';
+      const cmdDiv = document.createElement('div');
+      cmdDiv.className = 'ht-line';
+      cmdDiv.innerHTML = '<span class="ht-prompt">$</span> <span class="ht-cmd">' + cmd + '</span>';
+      modalEl.output.appendChild(cmdDiv);
+      if (cmd === 'clear') {
+        modalEl.output.innerHTML = '';
+      } else if (heroCommands[cmd]) {
+        heroType(heroCommands[cmd], modalEl.output, modalEl.body);
+      } else if (cmd) {
+        const err = document.createElement('div');
+        err.className = 'ht-line';
+        err.innerHTML = '<span class="ht-error">command not found: ' + cmd + '</span>';
+        modalEl.output.appendChild(err);
+      }
+      modalEl.body.scrollTop = modalEl.body.scrollHeight;
+    }
+  });
+}
+
+// CHATBOT
+const chatEl = {
+  output: document.getElementById('chatOutput'),
+  input: document.getElementById('chatInput'),
+  body: document.getElementById('chatBody')
+};
+
+const chatCommands = {
+  help: '<span class="cb-title">Commands</span>\n<span class="cb-list">whoami</span> - About me\n<span class="cb-list">skills</span> - My skills\n<span class="cb-list">projects</span> - My work\n<span class="cb-list">contact</span> - Reach me\n<span class="cb-list">experience</span> - Work history\n<span class="cb-list">hire</span> - Why hire me\n<span class="cb-list">clear</span> - Clear chat',
+  whoami: '<span class="cb-title">About Me</span>\n<span class="cb-label">Name</span> <span class="cb-value">Pulak Ranjan</span>\n<span class="cb-label">Role</span> <span class="cb-highlight">Systems & AI Engineer</span>\n<span class="cb-label">Location</span> <span class="cb-value">Hyderabad, India</span>\n<span class="cb-label">Company</span> <span class="cb-value">Bengal Skill Academy (Co-founder)</span>\n\nPharmacy graduate turned self-taught developer.\nBuilding systems that actually work.',
+  skills: '<span class="cb-title">Technical Skills</span>\n\n<span class="cb-section">Languages</span>\n<span class="cb-highlight">Python</span> • <span class="cb-highlight">Go</span> • PHP • JavaScript • TypeScript\n\n<span class="cb-section">Frameworks</span>\n<span class="cb-highlight">FastAPI</span> • <span class="cb-highlight">React</span> • <span class="cb-highlight">LangChain</span> • Transformers\n\n<span class="cb-section">Infrastructure</span>\n<span class="cb-highlight">Docker</span> • VPS • <span class="cb-highlight">Cloudflare Workers</span> • <span class="cb-highlight">KumoMTA</span>\n\n<span class="cb-section">Email</span>\n<span class="cb-highlight">SPF</span> • <span class="cb-highlight">DKIM</span> • <span class="cb-highlight">DMARC</span> • <span class="cb-highlight">IP Warmup</span>\n\n<span class="cb-section">AI</span>\n<span class="cb-highlight">RAG</span> • <span class="cb-highlight">Prompt Engineering</span> • <span class="cb-highlight">LLM APIs</span>',
+  projects: '<span class="cb-title">Projects</span>\n\n<span class="cb-section">KumoMTA UI</span>\nMTA control panel for email infrastructure\n<span class="cb-dim">Go, React, Node.js</span>\n\n<span class="cb-section">Youble Transcript API</span>\nYouTube caption extraction library\n<span class="cb-dim">PHP, Composer</span>\n\n<span class="cb-section">Pass-Gen</span>\nSecure password generator\n<span class="cb-dim">HTML, CSS, JavaScript</span>',
+  contact: '<span class="cb-title">Contact</span>\n\n<span class="cb-label">Email</span> <span class="cb-highlight">cloudnesh@gmail.com</span>\n<span class="cb-label">GitHub</span> <span class="cb-link">github.com/pulak-ranjan</span>\n<span class="cb-label">LinkedIn</span> <span class="cb-link">linkedin.com/in/pulak-ranjan</span>',
+  experience: '<span class="cb-title">Experience</span>\n\n<span class="cb-section">Bengal Skill Academy</span>\n<span class="cb-highlight">Co-founder & AI Developer</span>\nBuilding AI-driven educational tools\n\n<span class="cb-section">Publishing Company</span>\n<span class="cb-highlight">Context Engineer</span>\nAI integration & automation',
+  hire: '<span class="cb-title">Why Hire Me</span>\n\n<span class="cb-section">Email Deliverability</span>\n• IP warmup & reputation\n• SPF, DKIM, DMARC setup\n• Blacklist monitoring\n• Custom SMTP\n\n<span class="cb-section">AI Integration</span>\n• RAG systems\n• Custom chatbots\n• Prompt engineering\n\n<span class="cb-section">Automation</span>\n• Python workflows\n• Browser automation\n\n<span class="cb-highlight">Contact: cloudnesh@gmail.com</span>'
+};
+
+chatEl.input.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    const cmd = chatEl.input.value.trim().toLowerCase();
+    chatEl.input.value = '';
+    if (!cmd) return;
+    const cmdDiv = document.createElement('div');
+    cmdDiv.className = 'cb-line';
+    cmdDiv.innerHTML = '<span class="cb-prompt">→</span> <span class="cb-cmd">' + cmd + '</span>';
+    chatEl.output.appendChild(cmdDiv);
+    if (cmd === 'clear') {
+      chatEl.output.innerHTML = '<div class="cb-line"><span class="cb-dim">Chat cleared.</span></div>';
+    } else if (chatCommands[cmd]) {
+      const resp = document.createElement('div');
+      resp.className = 'cb-response';
+      resp.innerHTML = chatCommands[cmd];
+      chatEl.output.appendChild(resp);
+    } else {
+      const err = document.createElement('div');
+      err.className = 'cb-line';
+      err.innerHTML = '<span class="cb-error">Unknown: ' + cmd + '</span> <span class="cb-dim">Try "help"</span>';
+      chatEl.output.appendChild(err);
+    }
+    chatEl.body.scrollTop = chatEl.body.scrollHeight;
+  }
+});
+
+// UI INTERACTIONS
+const terminalToggle = document.getElementById('terminalToggle');
+const terminalModal = document.getElementById('terminalModal');
+terminalToggle.onclick = () => {
+  terminalModal.classList.toggle('active');
+  if (terminalModal.classList.contains('active')) {
+    chatEl.input.focus();
+  }
+};
+document.onkeydown = e => {
+  if (e.key === 'Escape') {
+    terminalModal.classList.remove('active');
+    heroTerminalModal.classList.remove('active');
+  }
+};
+
+// Mobile Menu
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileNav = document.getElementById('mobileNav');
+mobileMenuBtn.onclick = () => {
+  mobileNav.classList.toggle('active');
+  mobileMenuBtn.textContent = mobileNav.classList.contains('active') ? 'CLOSE' : 'MENU';
+};
+mobileNav.querySelectorAll('a').forEach(a => {
+  a.onclick = () => {
+    mobileNav.classList.remove('active');
+    mobileMenuBtn.textContent = 'MENU';
+  };
+});
+
+// Theme Switcher
+document.querySelectorAll('.theme-btn').forEach(btn => {
+  btn.onclick = () => {
+    document.body.setAttribute('data-theme', btn.dataset.color);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    localStorage.setItem('theme', btn.dataset.color);
+  };
+});
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  document.body.setAttribute('data-theme', savedTheme);
+  document.querySelectorAll('.theme-btn').forEach(b => {
+    b.classList.remove('active');
+    if (b.dataset.color === savedTheme) b.classList.add('active');
+  });
+}
+
+// Custom Cursor (Desktop Only)
+if (window.innerWidth > 900) {
+  const cursor = document.querySelector('.cursor');
+  const cursorDot = document.querySelector('.cursor-dot');
+  const cursorGlow = document.querySelector('.cursor-glow');
+  
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+    cursorDot.style.left = e.clientX + 'px';
+    cursorDot.style.top = e.clientY + 'px';
+    cursorGlow.style.left = e.clientX + 'px';
+    cursorGlow.style.top = e.clientY + 'px';
+  });
+  
+  document.querySelectorAll('a, button, .skill-tag, .project-card, .experience-card, .philosophy-card, .contact-link, .theme-btn, input').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+  });
+}
+
+// Scroll Reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('active');
+  });
+}, {threshold: 0.1});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Smooth Scroll
+document.querySelectorAll('nav a, .mobile-nav a, .hero-ctas a').forEach(a => {
+  a.onclick = function(e) {
+    const h = this.getAttribute('href');
+    if (h && h.startsWith('#')) {
+      e.preventDefault();
+      document.querySelector(h)?.scrollIntoView({behavior: 'smooth'});
+    }
+  };
+});
+
+// Active Nav Link
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (scrollY >= sectionTop - 200) {
+      current = section.getAttribute('id');
+    }
+  });
+  document.querySelectorAll('nav a').forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) {
+      a.classList.add('active');
+    }
+  });
+});
 </script>
 </body>
 </html>
